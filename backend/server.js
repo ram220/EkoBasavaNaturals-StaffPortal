@@ -13,10 +13,18 @@ app.use(express.json());
 
 connectDB();
 
+
+const allowedOrigins = [
+    "http://localhost:3000",
+    "https://eko-basava-naturals-staff-portal-p1h9gf5xk-ram220s-projects.vercel.app"
+];
+
 app.use(cors({
-    origin:'http://localhost:3000',
-    methods:["POST","GET"]
-}))
+    origin: allowedOrigins,
+    methods:["POST","GET"],
+    credentials: true
+}));
+
 
 app.use('/api/auth',authRoutes);
 app.use('/api/products',productRoutes);
