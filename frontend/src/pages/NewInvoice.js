@@ -5,8 +5,11 @@ import toast from "react-hot-toast";
 import TopNavbar from "../components/TopNavbar";
 import "../styles/NewInvoice.css";
 
-const PRODUCTS_API = "http://localhost:8000/api/products/get-all-products";
-const INVOICES_API = "http://localhost:8000/api/invoices/create-invoice";
+const liveUrl="https://ekobasavanaturals-staffportal-1.onrender.com";
+//const baseUrl="http://localhost:8000";
+
+const PRODUCTS_API = `${liveUrl}/api/products/get-all-products`;
+const INVOICES_API = `${liveUrl}/api/invoices/create-invoice`;
 
 const initialCustomer = {
   name: "",

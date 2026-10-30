@@ -5,7 +5,11 @@ import axios from "axios";
 import TopNavbar from "../components/TopNavbar";
 import "../styles/Invoices.css";
 
-const API_URL = "http://localhost:8000/api/invoices/get-invoice";
+const liveUrl="https://ekobasavanaturals-staffportal-1.onrender.com";
+//const baseUrl="http://localhost:8000";
+
+const API_URL = `${liveUrl}/api/invoices/get-invoice`;
+
 
 function Invoices() {
   const navigate = useNavigate();

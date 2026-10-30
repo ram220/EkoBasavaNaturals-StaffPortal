@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import toast from "react-hot-toast";
 import TopNavbar from "../components/TopNavbar";
 import "../styles/InvoiceDetails.css";
 
-const API_URL = "http://localhost:8000/api/invoices/get-invoice";
+const liveUrl="https://ekobasavanaturals-staffportal-1.onrender.com";
+//const baseUrl="http://localhost:8000";
+
+const API_URL = `${liveUrl}/api/invoices/get-invoice`;
 
 function InvoiceDetails() {
   const { id } = useParams();
