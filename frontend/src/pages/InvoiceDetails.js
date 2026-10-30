@@ -4,7 +4,7 @@ import axios from "axios";
 import TopNavbar from "../components/TopNavbar";
 import "../styles/InvoiceDetails.css";
 
-const liveUrl="https://ekobasavanaturals-staffportal-1.onrender.com";
+const liveUrl="https://eko-basava-naturals.vercel.app";
 //const baseUrl="http://localhost:8000";
 
 const API_URL = `${liveUrl}/api/invoices/get-invoice`;
