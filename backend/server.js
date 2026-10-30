@@ -20,8 +20,23 @@ const allowedOrigins = [
     "https://eko-basava-naturals.vercel.app"
 ];
 
+app.use((req, res, next) => {
+    console.log("REQUEST ORIGIN:", req.headers.origin);
+    console.log("ALLOWED ORIGINS:", allowedOrigins);
+    next();
+});
+
 app.use(cors({
-    origin: allowedOrigins,
+    origin: (origin, callback) => {
+        console.log("CORS CHECK:", origin);
+
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            console.log("BLOCKED ORIGIN:", origin);
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
