@@ -6,6 +6,8 @@ import axios from "axios";
 import {toast} from 'react-hot-toast'
 
 function Signup() {
+  const liveUrl="https://ekobasavanaturals-staffportal-1.onrender.com";
+//const baseUrl="http://localhost:8000";
   const navigate = useNavigate();
 
   const [userData, setUserData] = useState({
@@ -68,7 +70,7 @@ function Signup() {
       // const data = await response.json();
       // if (!response.ok) throw new Error(data.message || "Signup failed");
 
-      const response=await axios.post('http://localhost:8000/api/auth/signup',userData);
+      const response=await axios.post(`${liveUrl}/api/auth/signup`,userData);
       console.log(response);
       if(response.data.status==="success"){
         toast.success("Your EkoBasava Account Created");
