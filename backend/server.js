@@ -16,7 +16,8 @@ connectDB();
 
 const allowedOrigins = [
     "http://localhost:3000",
-    "https://eko-basava-naturals-staff-portal-p1h9gf5xk-ram220s-projects.vercel.app"
+    "https://eko-basava-naturals-staff-portal-p1h9gf5xk-ram220s-projects.vercel.app",
+    "https://eko-basava-naturals.vercel.app"
 ];
 
 app.use(cors({
