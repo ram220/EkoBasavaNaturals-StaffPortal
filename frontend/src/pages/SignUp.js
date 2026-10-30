@@ -6,7 +6,7 @@ import axios from "axios";
 import {toast} from 'react-hot-toast'
 
 function Signup() {
-  const liveUrl="https://eko-basava-naturals.vercel.app";
+  const liveUrl="https://ekobasavanaturals-staffportal-1.onrender.com";
 //const baseUrl="http://localhost:8000";
   const navigate = useNavigate();
 

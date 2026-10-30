@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import TopNavbar from "../components/TopNavbar";
 import "../styles/NewInvoice.css";
 
-const liveUrl="https://eko-basava-naturals.vercel.app";
+const liveUrl="https://ekobasavanaturals-staffportal-1.onrender.com";
 //const baseUrl="http://localhost:8000";
 
 const PRODUCTS_API = `${liveUrl}/api/products/get-all-products`;
